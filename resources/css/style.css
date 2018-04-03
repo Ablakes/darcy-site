@@ -488,6 +488,7 @@ body {
 	position: fixed;
 	top: 6vh;
 	left: 6vw;*/
+
 }
 
 .main-banner-container {
@@ -509,6 +510,13 @@ body {
 }
 
 #main-title {
+
+}
+
+@keyframes fadein {
+	100% {
+		opacity: 1;
+	}
 }
 
 #mobile-title {
@@ -735,28 +743,44 @@ input[type=submit]:active {
 	top: 10vh;
 }
 
-.bio {
+.bio-title {
+	font-weight: 400;
+	text-align: center;
+}
+
+.bio-first {
+	font-size: 1.3em;
+}
+
+.bio-text {
+	z-index: 100;
 	margin: auto;
     position: relative;
     right: 7%;
-	height: 80vh;
 	width: 70vw;
 	border: 3px solid #430F25;
 	background: url(img/cloth.jpg);
 	-webkit-background-size: cover;
 	     -o-background-size: cover;
 	        background-size: cover;
-	display: flex;
+	padding: 2.5em 12em 4em 6em;
+	font-family: Roboto-Light;
+	font-weight: 400;
+	font-size: 18px;
+	color: #030214;
+	letter-spacing: 0.67px;
+	line-height: 28px;
 }
 
-.bio-headshot {
-	background: url("../img/headshots/Darcy034copy.jpg") no-repeat center;
+#bio-headshot {
+/*	background: url("../img/headshots/Darcy034copy.jpg") no-repeat center;
 	-webkit-background-size: contain;
 	     -o-background-size: contain;
-	        background-size: contain;
-	margin: auto 0;
-	position: relative;
-	left: 83%;
+	        background-size: contain;*/
+	z-index: 1000;
+	position: absolute;
+	right: 3%;
+	top: 20%;
 	height: 468px;
 	width: 312px;
 	box-shadow: 0 8px 27px 0 rgba(0,0,0,0.31);
@@ -773,29 +797,14 @@ input[type=submit]:active {
 }
 
 .carousel {
+	background-color: rgba(0,0,0,.9);
 	overflow: hidden;
 	position: relative;
 	z-index: 0;
 	top: 13vh;
 	width: 70vw;
-	height: 70vh;
+	height: 50vh;
 	margin: 0 auto;
-}
-
-.carousel::before {
-	content: '';
-	background-image: url("img/hero.png");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    height: 100vh;
-    width: 100vw;
-	position: absolute;
-	top: -150px; bottom: -100px; left: -100px; right:-100px;
-	-webkit-box-shadow: inset 0 0 0 3000px rgba(0,0,0,.92);
-	        box-shadow: inset 0 0 0 3000px rgba(0,0,0,.92);
-	-webkit-filter: blur(20px);
-	        filter: blur(20px);
 }
 
 .carousel-cell {
@@ -804,10 +813,10 @@ input[type=submit]:active {
 }
 
 .main-carousel-images {
-	max-width: 1000%;
+	max-width: 100%;
 	margin-right: 5vw;
 	margin-left: 5vw;
-	height: 70vh;
+	height: 50vh;
 }
 
 .flickity-page-dots .dot {
@@ -832,7 +841,7 @@ input[type=submit]:active {
 	        justify-content: center;	*/
 }
 
-.container {
+.form-container {
 	margin-left: 49.5%;
 	max-width: 500px;
 	width: 100%;

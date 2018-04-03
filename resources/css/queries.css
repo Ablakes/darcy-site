@@ -1,117 +1,88 @@
-/*
-@media only screen and (max-width: 1000px) {
-    .hero {
-        height: 100%;
-        background: url("img/hero-md.png") no-repeat;
-        background-position: center 0;
-    }
-    .main-banner-container {
-        width: 100vw;
-        margin-top: 830px;
-        flex-direction: column;
-        align-items: center;
-    }
-    .bio-headshot {
-        height: 375px;
-        width: 250px;
-    }
-}
-
-@media only screen and (max-height: 1050px) {
-
-    footer {
-        position: relative;
-    }
-    footer ul {
-        position: relative;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    .hero{
-        background: url("img/hero-sm.png") no-repeat;
-        background-position: center 0;
-    }
-}
-*/
-
-@media only screen and (min-width: 1450px) {
-    #hero-image {
-/*        margin-top: 5vh;
-        left: 14%;*/
-    }
+@media all and (min-width: 1450px) {
     #logo {
         left: 12%;
     }
-/*    .main-banner-container {
-        margin-top: 25%;
-    }*/
     .demo-content {
         max-width: 1000px;
     }
-
     .bio {
         max-width: 1000px;
         max-height: 800px;
     }
-
     .carousel {
         max-width: 1000px;
     }
 }
 
+@media all and (max-width: 1200px) {
+    #bio-headshot {
+        display: none;
+    }
+    .bio-text {
+        font-size: 16px;
+        padding: 4em;
+        right: 0;
+        line-height: 25px;
+    }
+}
 
-@media only screen and (min-width: 1050px) {
-    
+@media all and (min-width: 1050px) {
     .main-banner {
         min-width: 600px;
     }
-    #hero-image {
+}
 
+@media all and (max-width: 1050px) {
+    #contact {
+        width: 90%;
+    }
+    .carousel {
+        width: 90vw;
     }
 }
 
-@media only screen and (min-width: 800px) {
-    .main-banner {
-        min-width: 490px;
-    }
-}
-
-@media only screen and (max-width: 1200px) {
-    .main-banner-container {
-
-    }
-}
-
-@media only screen and (max-width: 975px) {
-
+@media all and (max-width: 975px) {
     nav ul li {
         font-size: 13px;
     }
     .nav-first {
         font-size: 17px;
     }
-
+    .bio-text {
+        padding: 4em;
+        line-height: 24px;
+        width:
+    }
 }
 
-@media only screen and (orientation: portrait) , screen and (max-width: 950px) {
+@media all and (max-width: 875px) {
+    .bio-text {
+        width: 90vw;
+    }
+}
 
+@media all and (min-width: 800px) {
+    .main-banner {
+        min-width: 490px;
+    }
+}
+
+
+@media all and (orientation: portrait) , screen and (max-width: 950px) {
     .hero {
-        width: 100vw;
+        width: 100%;
+        margin: 0;
     }
     #hero-image {
-/*        top: auto;
-        left: auto;*/
         max-width: 84%;
         min-width: 40%;
         margin-top: -10vh;
         margin-left: -6vw;
-        
     }
     .main-banner-container {
         width: 100vw;
         justify-content: center;
-        margin-top: 70vh;
+        margin-top: 75vh;
     }
     #main-title {
         display: none;
@@ -120,8 +91,40 @@
         display: block;
         width: 80vw;
     }
-    nav, section, footer {
-        display: none !important; 
+    .form-container {
+        max-width: 1000px;
+        margin: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
-
+    #contact {
+        width: 500px;
+    }
+/*    nav, .js--section-bio, .js--section-demo, footer {
+        display: none !important;
+    }*/
 }
+
+@media all and (orientation: portrait) , screen and (min-width: 950px) {
+    #hero-image {
+        width: 60vw;
+    }
+    footer {
+        display: block;
+    }
+}
+
+@media all and (max-width: 550px) {
+    #contact {
+        width: 90vw;
+    }
+        .bio-text {
+        padding: 3em;
+        width: 100vw;
+    }
+/*     nav, .js--section-photo, .js--section-demo, footer {
+        display: none !important;
+    }*/
+}
+
