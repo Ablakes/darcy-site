@@ -20,6 +20,7 @@ html {
 
 body {
   margin: 0;
+  
 }
 
 /**
@@ -355,6 +356,7 @@ ul{
 
 body {
 	position: absolute;
+	background-color: #040317;
 
 }
 
@@ -368,6 +370,20 @@ body {
 }
 
 /***** NAVIGATION ******/
+
+#lowest-background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1000;
+	background: -webkit-linear-gradient(#060528 0%, #030213 100%);
+	background: -o-linear-gradient(#060528 0%, #030213 100%);
+	background: linear-gradient(#060528 0%, #030213 100%);
+	height: 100vh;
+	width: 100vw;
+}
 
 #logo {
 	position: fixed;
@@ -427,8 +443,10 @@ nav li a:active {
   	left: 0;
   	right: 0;
 	z-index: 100;
+	max-width: 1440px;
 	padding-top: 20px;
 	padding-bottom: 20px;
+	margin: 0 auto;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -444,37 +462,56 @@ nav li a:active {
 /***** HERO ******/
 
 .hero {
-    background-image: url("img/hero2.png");
+    /*background-image: url("img/hero2.png");*/
+    background-image: linear-gradient(-180deg, #060528 0%, #030213 100%);
+    background-size: cover;
     background-position: center;
     height: 100vh;
-    position: fixed;
-    width: 100%;
+	width: 100vw;
+	position: fixed;
+	top:0;
+	max-width: 1440px;
+}
 
+html {
+	display: flex;
+	justify-content: center;
+}
+body {
+	max-width: 1440px;
+}
+
+#hero-image {
+	width: 57vh;
+	min-width: 100px;
+	max-width: 30vw;
+	position: fixed;
+	top: 6vh;
+	left: 6vw;
 }
 
 .main-banner-container {
-	width: 100%;
+	width: 92vw;
+	margin-top: 36vh;
+	display: flex;
+	justify-content: flex-end;
 }
 
 .main-banner {
-	width: 658px;
-	margin-top: 40vh;
-	margin-left: 47%;
+	width: 50vw;
+	min-width: 430px;
 	position: relative;
 	z-index: 10;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-.btn-container {
-	width: 100%;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
+#main-title {
+}
+
+.hidden-title {
+	display: none;
 }
 
 /* ----- BUTTONS ----- */
@@ -507,10 +544,10 @@ input[type=submit] {
 .btn-full:link,
 .btn-full:visited,
 input[type=submit] {
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#DBDAEB), to(#B4B1D7));
-	background-image: -webkit-linear-gradient(top, #DBDAEB 0%, #B4B1D7 100%);
-	background-image: -o-linear-gradient(top, #DBDAEB 0%, #B4B1D7 100%);
-	background-image: linear-gradient(-180deg, #DBDAEB 0%, #B4B1D7 100%);;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#DFDFDF), to(#B4B1D7));
+	background-image: -webkit-linear-gradient(top, #DFDFDF 0%, #B4B1D7 100%);
+	background-image: -o-linear-gradient(top, #DFDFDF 0%, #B4B1D7 100%);
+	background-image: linear-gradient(-180deg, #DFDFDF 0%, #B4B1D7 100%);;
     color: #030318;
     margin-right: 15px;
 }
@@ -645,6 +682,7 @@ input[type=submit]:active {
 	-webkit-box-align: start;
 	    -ms-flex-align: start;
 	        align-items: flex-start;
+	flex-wrap: wrap;
 }
 
 
@@ -688,15 +726,35 @@ input[type=submit]:active {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
 	position: relative;
 	top: 10vh;
-	
+}
+
+.bio {
+	margin: auto;
+    position: relative;
+    right: 7%;
+	height: 80vh;
+	width: 70vw;
+	border: 3px solid #430F25;
+	background: url(img/cloth.jpg);
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+	display: flex;
+}
+
+.bio-headshot {
+	background: url("../img/headshots/Darcy034copy.jpg") no-repeat center;
+	-webkit-background-size: contain;
+	     -o-background-size: contain;
+	        background-size: contain;
+	margin: auto 0;
+	position: relative;
+	left: 83%;
+	height: 468px;
+	width: 312px;
+	box-shadow: 0 8px 27px 0 rgba(0,0,0,0.31);
 }
 
 /***** PHOTO GALLERY ******/
@@ -1055,4 +1113,11 @@ footer ul {
 
 .ion-social-instagram:hover {
     color: #517fa4;
+}
+
+
+
+
+@media only screen and (max-width: 900px) {
+	
 }

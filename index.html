@@ -8,11 +8,20 @@
 		<link rel="stylesheet" href="flickity-docs/flickity.css" media="screen">
 		<link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
         <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
     </head>
     <body>
+    	<div id="lowest-background"></div>
         <header class="js--section-home">
         	<div class="hero">
+        		<img id="hero-image" src="resources/css/img/hero-image.png">
         	</div>
+        	<div class="hidden-title">
+				<h1>Darcy Blakesley</h1>
+				<h2>Voice Over Artist</h2>
+			</div>
+			<nav>
+                <div class="row">
 			<a href="javascript:;">
 				<svg class="scroll-to-home" id="logo" width="67px" height="52px" viewBox="0 0 67 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 				    <desc>Created with Sketch.</desc>
@@ -39,8 +48,6 @@
 				    </g>
 				</svg>
 			</a>
-            <nav>
-                <div class="row">
 	                <ul>
 	                    <li><a href="javascript:;" class="scroll-to-demo"><span class="nav-first">D</span>emo</a></li>
 	                    <li><a href="javascript:;" class="scroll-to-bio"><span class="nav-first">B</span>io</a></li>
@@ -53,10 +60,8 @@
 
 		<div class="main-banner-container">
 			<div class="main-banner">
-				<img src="resources/css/img/title.png">
-				<div class="btn-container">
-					<a class="btn btn-full scroll-to-demo" href="javascript:;">Play Demo</a>
-				</div>
+				<img id="main-title" src="resources/css/img/title.png">
+				<a class="btn btn-full scroll-to-demo" href="javascript:;">Play Demo</a>
 			</div>
 		</div>
 
@@ -69,23 +74,22 @@
 					<h3 class="recent-clients-title"><span class="recent-clients-first">R</span>ecent <span class="recent-clients-first">C</span>lients</h3>
 				</div>
 				<div class="row client-logos">
-					<img class="logos" id="honda-logo"src="resources/css/img/logos/honda-logo.png">
-					<img class="logos" id="marvel-logo"src="resources/css/img/logos/marvel-logo.png">
-					<img class="logos" id="whole-logo"src="resources/css/img/logos/whole-logo.png">
-					<img class="logos" id="pick-logo"src="resources/css/img/logos/pick-logo.png">
-					<img class="logos" id="murad-logo"src="resources/css/img/logos/murad-logo.png">
+					<img class="logos" id="honda-logo" src="resources/css/img/logos/honda-logo.png">
+					<img class="logos" id="marvel-logo" src="resources/css/img/logos/marvel-logo.png">
+					<img class="logos" id="whole-logo" src="resources/css/img/logos/whole-logo.png">
+					<img class="logos" id="pick-logo" src="resources/css/img/logos/pick-logo.png">
+					<img class="logos" id="murad-logo" src="resources/css/img/logos/murad-logo.png">
 				</div>
 			</div>
 
-	<!-- 			<img id="recent-clients" src="resources/css/img/recent-clients.png"> 
-			
-
-			<!-- <audio id="audio-playback" controls src="resources/audio/demo-reel.mp3"></audio> -->
 		</section>
+
 		<div id="midline"></div>
+
 		<section class="js--section-bio">
 			<div class="bio">
-				<img src="bio.png">
+			<!-- 	<img src="bio.png"> -->
+				<div class="bio-headshot"></div>
 			</div>
 		</section>
 
@@ -155,7 +159,7 @@
     <script src="http://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
     <script src="http://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="http://cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
-    <script src="vendors/js/jquery.waypoints.min.js"></script>http:
+    <script src="vendors/js/jquery.waypoints.min.js"></script>
 	<script src="flickity-docs/flickity.pkgd.min.js"></script>
 	<script type="text/javascript" src="script.js"></script>
     </body>
