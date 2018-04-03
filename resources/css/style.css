@@ -461,18 +461,6 @@ nav li a:active {
 
 /***** HERO ******/
 
-.hero {
-    /*background-image: url("img/hero2.png");*/
-    background-image: linear-gradient(-180deg, #060528 0%, #030213 100%);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-	width: 100vw;
-	position: fixed;
-	top:0;
-	max-width: 1440px;
-}
-
 html {
 	display: flex;
 	justify-content: center;
@@ -481,20 +469,33 @@ body {
 	max-width: 1440px;
 }
 
+.hero {
+    /*background-image: url("img/hero2.png");*/
+	height: 100vh;
+	width: 28vw;
+	margin-left: 5%;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 #hero-image {
-	width: 57vh;
-	min-width: 100px;
+	min-width: 350px;
+/*	width: 57vh;
+	min-width: 300px;
 	max-width: 30vw;
 	position: fixed;
 	top: 6vh;
-	left: 6vw;
+	left: 6vw;*/
 }
 
 .main-banner-container {
-	width: 92vw;
-	margin-top: 36vh;
+	width: 87vw;
+	margin-top: 37vh;
 	display: flex;
 	justify-content: flex-end;
+	max-width: 100%;
 }
 
 .main-banner {
@@ -508,6 +509,10 @@ body {
 }
 
 #main-title {
+}
+
+#mobile-title {
+	display: none;
 }
 
 .hidden-title {
@@ -722,7 +727,7 @@ input[type=submit]:active {
 
 .js--section-bio {
 	height: 100vh;
-	width: 100vw;
+	width: 100%;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;

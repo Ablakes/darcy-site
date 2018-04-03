@@ -37,17 +37,15 @@
 
 @media only screen and (min-width: 1450px) {
     #hero-image {
-        margin-top: 5vh;
-        left: 14%;
+/*        margin-top: 5vh;
+        left: 14%;*/
     }
     #logo {
-        position: relative;
-        display: flex;
-        top: 0;
+        left: 12%;
     }
-    .main-banner-container {
+/*    .main-banner-container {
         margin-top: 25%;
-    }
+    }*/
     .demo-content {
         max-width: 1000px;
     }
@@ -63,30 +61,27 @@
 }
 
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1050px) {
     
     .main-banner {
         min-width: 600px;
     }
     #hero-image {
-        max-width: 70vw;
+
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .main-banner {
+        min-width: 490px;
     }
 }
 
 @media only screen and (max-width: 1200px) {
-    
     .main-banner-container {
-        width: 95vw;
-    }
-    #hero-image {
-        left: 4vw;
+
     }
 }
-
-@media only screen and (max-width: 1200px) {
-    #hero-image {
-        left: 3vw;
-    }
 
 @media only screen and (max-width: 975px) {
 
@@ -96,29 +91,34 @@
     .nav-first {
         font-size: 17px;
     }
-    #hero-image {
-        left: 0;
-        min-width: 350px;
-    }
-    .main-banner {
-
-    }
 
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (orientation: portrait) , screen and (max-width: 950px) {
+
     .hero {
-        display: flex;
-        justify-content: center;
+        width: 100vw;
     }
     #hero-image {
-        top: auto;
-        left: auto;
+/*        top: auto;
+        left: auto;*/
+        max-width: 84%;
+        min-width: 40%;
+        margin-top: -10vh;
+        margin-left: -6vw;
+        
     }
     .main-banner-container {
         width: 100vw;
         justify-content: center;
         margin-top: 70vh;
+    }
+    #main-title {
+        display: none;
+    }
+    #mobile-title {
+        display: block;
+        width: 80vw;
     }
     nav, section, footer {
         display: none !important; 
