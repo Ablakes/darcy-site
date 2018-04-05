@@ -532,6 +532,7 @@ body {
 
 #mobile-title {
 	display: none;
+	min-width: 250px;
 }
 
 .hidden-title {

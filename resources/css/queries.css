@@ -60,27 +60,6 @@
     }
 }
 
-/*@media all and (orientation: portrait), screen and (min-width: 950px) {
-    .hero {
-        width: 100%;
-        margin: 0;
-    }
-    #hero-image {
-        min-width: 550px;
-        margin-top: -15vh;
-        margin-left: -6vw;
-    }
-    .main-banner-container {
-        width: 100vw;
-        justify-content: center;
-        margin-top: 75vh;
-    }
-    footer {
-        display: block;
-    }
-
-}*/
-
 /* iPad Pro */
 @media all and (orientation: portrait) and (min-width: 950px) {
     
@@ -90,7 +69,7 @@
     }
     #hero-image {
         width: 60vw;
-        max-width: 1000px;
+        max-width: 600px;
         min-width: 0;
         margin-top: -10vh;
         margin-right: 3.5%;
@@ -107,13 +86,15 @@
 }
 
 /*Center hero on vertical screens*/
-@media all and (orientation: portrait) and (max-width: 950px) {
+@media all and (orientation: portrait) and (max-width: 950px),
+(orientation: landscape) and (max-width: 800px) and (min-height: 500px),
+(orientation: landscape) and (max-aspect-ratio: 6/4) and (max-width: 700px) {
     .hero {
         width: 100%;
         margin: 0;
     }
     #hero-image {
-        max-width: 400px;
+        max-width: 380px;
         width: 70vw;
         min-width: 0;
         margin-top: -15vh;
@@ -144,10 +125,6 @@
     .footer-row {
         background-image: none;
     }
-
-/*    nav, .js--section-bio, .js--section-demo, footer {
-        display: none !important;
-    }*/
 }
 
 @media all and (max-width: 875px) {
@@ -162,7 +139,7 @@
     }
 }
 
-@media only and (max-height: 750px) {
+@media only and (max-height: 750px), (orientation: landscape) and (max-height: 450px) {
     footer, footer ul {
         position: relative;
     }
@@ -216,7 +193,7 @@
         right: 15px;
     }
     #hero-image {
-        max-width: 380px;
+        /*max-width: 350px;*/
     }
     footer, footer ul {
         position: relative;
@@ -238,7 +215,7 @@
         width: 60vw;
     }
     #hero-image {
-        max-width: 320px;
+        /*max-width: 320px;*/
     }
 /*  nav, .js--section-photo, .js--section-demo, footer {
         display: none !important;
@@ -254,7 +231,13 @@
     }
 }
 
-@media all and (orientation:landscape) and (max-height: 500px) {
+@media all and (orientation: landscape) and (max-width: 700px) {
+    #logo {
+        height: 30px;
+    }
+}
+
+@media all and (orientation:landscape) and (max-height: 300px) {
     #hero-image {
         max-width: 50vh;
         margin-top: 0;
@@ -296,12 +279,68 @@
     }
 }
 
-@media all and (orientation: landscape) and (max-height: 400px) {
+@media all and (orientation: landscape) and (max-height: 400px) and (max-width: 500px) {
     .main-banner {
         min-width: 200px;
     }
     #hero-image {
         min-width: 170px;
         margin-top: 10vh;
+        max-width: 0;
+    }
 }
+
+/*Hide hero-image on tiny screens*/
+@media all and (orientation: landscape) and (max-height:300px), (orientation: portrait) and (max-width: 300px), (orientation: portrait) and (max-height: 479px) {
+    .hero {
+        width: 100%;
+        margin: 0;
+    }
+    #hero-image {
+        display: none;
+    }
+    .main-banner-container {
+        width: 100vw;
+        justify-content: center;
+        margin-top: 40vh;
+    }
+    #main-title {
+        width: 70vw;
+        max-width: 150%;
+    } 
+}
+
+/*Tweak for portrait ipads*/
+@media all and (orientation: portrait) and (min-width:750px) and (max-width:780px) {
+    #hero-image {
+        max-width: 400px;
+    }
+    .main-banner {
+        width: 60vw;
+    }
+    #main-title {
+        display: block;
+    }
+    #mobile-title {
+        display: none;
+    }
+}
+
+@media all and (orientation: landscape) and (min-width: 1200px) and (min-height: 750px) {
+    .hero {
+        width: auto;
+        margin-left: 0;
+    }
+}
+
+@media all and (orientation:landscape) and (max-height: 500px) {
+    #main-title {
+        display: none;
+    }
+    #mobile-title {
+        display: block;
+    }
+    .main-banner {
+        min-width: 200px;
+    }
 }
