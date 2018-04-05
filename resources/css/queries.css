@@ -344,3 +344,9 @@
         min-width: 200px;
     }
 }
+
+@media all and (max-height: 700px) {
+    footer, footer ul{
+        position: relative;
+    }
+}
