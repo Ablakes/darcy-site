@@ -188,8 +188,14 @@
 }
 
 /*Tweak for square shaped screens*/
-@media all and (min-aspect-ratio: 4/7) and (max-height: 600px) and (max-width:750px) {
+@media all and (min-aspect-ratio: 4/7) and (max-height: 750px) and (max-width:750px) and (min-width: 600px) {
     #hero-image {
         max-width: 50vw;
     }
+}
+
+@media all and (max-height: 600px), (max-width: 600px) {
+    #hero-image {
+    max-width: 50vh;
+}
 }
