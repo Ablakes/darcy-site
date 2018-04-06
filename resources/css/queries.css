@@ -1,6 +1,10 @@
+/* giant screens */
 @media all and (min-width: 1450px) {
     #logo {
         left: 12%;
+    }
+    #hero-image {
+        min-width: 300px;
     }
     .demo-content {
         max-width: 1000px;
@@ -16,36 +20,14 @@
     }
 }
 
-@media all and (max-width: 1200px) {
-    #bio-headshot {
-        display: none;
-    }
-    .bio-text {
-        font-size: 16px;
-        padding: 4em;
-        right: 0;
-        line-height: 25px;
+/*remove footer transluscent gradient*/
+@media all and (max-width: 800px), (max-height: 700) {
+    .footer-row {
+        background-image: none;
     }
 }
 
-@media all and (min-width: 1050px) {
-    .main-banner {
-        min-width: 600px;
-    }
-}
-
-@media all and (max-width: 1050px) {
-    #contact {
-        width: 90%;
-    }
-    .carousel {
-        width: 90vw;
-    }
-    .footer-row ul {
-        width: 40vw;
-    }
-}
-
+/*smaller nav font-size*/
 @media all and (max-width: 975px) {
     nav ul li {
         font-size: 13px;
@@ -53,42 +35,75 @@
     .nav-first {
         font-size: 17px;
     }
-    .bio-text {
-        padding: 4em;
-        line-height: 24px;
-        width:
+}
+
+/*remove fixed positioning from footer*/
+@media all and (max-height: 700px) and (max-width: 700px), (max-height: 600px) {
+    footer, footer ul {
+        position: relative;
+    }
+    .footer-row {
+        background-image: none;
+    }
+} 
+
+@media all and (min-width: 650px) {
+    .js--nav-link {
+        display: none;
     }
 }
 
-/* iPad Pro */
-@media all and (orientation: portrait) and (min-width: 950px) {
-    
-    .hero {
-        width: 100%;
-        margin: 0;
+/*Switch to hamburger*/
+@media all and (max-width: 650px) {
+        #logo {
+        position: fixed;
+        top: 13px;
+        left: 3px;
+        height: 35px;
     }
-    #hero-image {
-        width: 60vw;
-        max-width: 600px;
-        min-width: 0;
-        margin-top: -10vh;
-        margin-right: 3.5%;
+    .mobile-nav-icon {
+        z-index: 1000;
+        display: block;
+        font-size: 1.7em;
+        position: fixed;
+        top: 0;
+        right: 15px;
     }
-    .main-banner-container {
-        width: 100vw;
+    nav li a:hover,
+    nav li a:active {
+        border-bottom: none;
+    }
+    .js--main-nav {
+
+    }
+    .row ul {
+        display: none;
+        flex-direction: column;
         justify-content: center;
-        margin-top: 75vh;
+        align-items: center;
+        padding-top: 70px;
+        background-color: rgba(5,4,33,.9);
+        padding-bottom: 0;
     }
-    #main-title {
-        width: 70vw;
-        max-width: 150%;
+    .row ul li {
+        text-align: center;
+        padding-right: 0;
+        margin-bottom: 20px;
+        border-bottom: 2px solid rgba(122,122,122,.4);
+        width: 100vw;
+    }
+    #demo-nav-item{
+        border-top: 2px solid rgba(122,122,122,.4);
+        padding-top: 20px;
+    }
+    #contact-nav-item {
+        margin-bottom: 0;
     }
 }
 
-/*Center hero on vertical screens*/
-@media all and (orientation: portrait) and (max-width: 950px),
-(orientation: landscape) and (max-width: 800px) and (min-height: 500px),
-(orientation: landscape) and (max-aspect-ratio: 6/4) and (max-width: 700px) {
+/* Center hero */
+@media all and (max-width: 650px), (orientation: portrait) {
+
     .hero {
         width: 100%;
         margin: 0;
@@ -125,222 +140,17 @@
     .footer-row {
         background-image: none;
     }
+
 }
 
-@media all and (max-width: 875px) {
-    .bio-text {
-        width: 90vw;
+/*Hide hero-image and center title on tiny screens*/
+@media all and (max-width: 300px), (max-height: 400px) {
+    .hero {
+        display: none;
     }
-}
-
-@media all and (min-width: 800px) {
-    .main-banner {
+    .main-banner-container{
+        justify-content: center;
+        width: 100vw;
         min-width: 250px;
-    }
-}
-
-@media only and (max-height: 750px), (orientation: landscape) and (max-height: 450px) {
-    footer, footer ul {
-        position: relative;
-    }
-}
-@media all and (max-width: 570px), (orientation: portrait) and (max-width: 550px) {
-    #logo {
-        position: fixed;
-        top: 15px;
-        left: 0;
-        height: 35px;
-    }
-    .nav-row {
-        z-index: 1000;
-        position: fixed;
-        width: 100vw;
-        height: 50px;
-        background-color: rgb(5,4,33);
-    }
-    .bio-text{
-        display: none;
-    }
-    .row ul {
-        display: none;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-top: 70px;
-        background-color: rgba(5,4,33,.9);
-        padding-bottom: 0;
-    }
-    .row ul li {
-        text-align: center;
-        padding-right: 0;
-        margin-bottom: 20px;
-        border-bottom: 2px solid rgba(122,122,122,.4);
-        width: 100vw;
-    }
-    nav li a:hover,
-    nav li a:active {
-        border: none;
-    }
-    #contact-nav-item {
-        margin-bottom: 0;
-    }
-    .mobile-nav-icon {
-        z-index: 1000;
-        display: block;
-        font-size: 1.7em;
-        position: fixed;
-        top: 0;
-        right: 15px;
-    }
-    #hero-image {
-        /*max-width: 350px;*/
-    }
-    footer, footer ul {
-        position: relative;
-    }
-}
-
-@media all and (max-width: 550px) {
-    #logo {
-        height: 30px;
-    }
-    #contact {
-        width: 90vw;
-    }
-    .bio-text {
-        padding: 3em;
-        width: 100vw;
-    }
-    .footer-row ul {
-        width: 60vw;
-    }
-    #hero-image {
-        /*max-width: 320px;*/
-    }
-/*  nav, .js--section-photo, .js--section-demo, footer {
-        display: none !important;
-    }*/
-}
-
-@media all and (max-width: 350px) {
-    #logo {
-        height: 25px;
-    }
-    #hero-image {
-        max-width: 250px;
-    }
-}
-
-@media all and (orientation: landscape) and (max-width: 700px) {
-    #logo {
-        height: 30px;
-    }
-}
-
-@media all and (orientation:landscape) and (max-height: 300px) {
-    #hero-image {
-        max-width: 50vh;
-        margin-top: 0;
-    }
-    #mobile-title {
-        width: 50vh;
-    }
-
-    footer, footer ul {
-        position: relative;
-    }
-}
-
-/* iPhone X */
-@media all and (orientation: portrait) and (min-height: 750px) and (max-height: 850px) {
-    #hero-image {
-        width: 100%;
-    }
-    #mobile-title {
-        width: 85vw;
-    }
-}
-
-/*iPhone X landscape*/ 
-@media all and (orientation: landscape) and (max-height: 500px) {
-    #hero-image {
-        min-width: 200px;
-    }
-}
-
-/* Fixing square displays */ 
-
-@media all and (orientation: portrait) and (min-width: 550px) and (max-height: 750px) {
-     footer, footer ul {
-        position: relative;
-    }   
-    #hero-image {
-        max-width: 320px;
-    }
-}
-
-@media all and (orientation: landscape) and (max-height: 400px) and (max-width: 500px) {
-    .main-banner {
-        min-width: 200px;
-    }
-    #hero-image {
-        min-width: 170px;
-        margin-top: 10vh;
-        max-width: 0;
-    }
-}
-
-/*Hide hero-image on tiny screens*/
-@media all and (orientation: landscape) and (max-height:300px), (orientation: portrait) and (max-width: 300px), (orientation: portrait) and (max-height: 479px) {
-    .hero {
-        width: 100%;
-        margin: 0;
-    }
-    #hero-image {
-        display: none;
-    }
-    .main-banner-container {
-        width: 100vw;
-        justify-content: center;
-        margin-top: 40vh;
-    }
-    #main-title {
-        width: 70vw;
-        max-width: 150%;
-    } 
-}
-
-/*Tweak for portrait ipads*/
-@media all and (orientation: portrait) and (min-width:750px) and (max-width:780px) {
-    #hero-image {
-        max-width: 400px;
-    }
-    .main-banner {
-        width: 60vw;
-    }
-    #main-title {
-        display: block;
-    }
-    #mobile-title {
-        display: none;
-    }
-}
-
-@media all and (orientation: landscape) and (min-width: 1200px) and (min-height: 750px) {
-    .hero {
-        width: auto;
-        margin-left: 0;
-    }
-}
-
-@media all and (orientation:landscape) and (max-height: 500px) {
-    #main-title {
-        display: none;
-    }
-    #mobile-title {
-        display: block;
-    }
-    .main-banner {
-        min-width: 200px;
     }
 }
