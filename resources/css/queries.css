@@ -4,6 +4,7 @@
         left: 12%;
     }
     #hero-image {
+        max-width: 500px;
         min-width: 300px;
     }
     .demo-content {
@@ -55,11 +56,17 @@
 
 /*Switch to hamburger*/
 @media all and (max-width: 650px) {
-        #logo {
+    #logo {
         position: fixed;
-        top: 13px;
-        left: 3px;
-        height: 35px;
+        top: 22px;
+        left: 5px;
+        height: 32px;
+    }
+    .ion-close-round {
+        position: fixed;
+        right: 30px;
+        top: 15px;
+        font-size: 1.3em;
     }
     .mobile-nav-icon {
         z-index: 1000;
@@ -73,28 +80,34 @@
     nav li a:active {
         border-bottom: none;
     }
-    .js--main-nav {
-
+    nav a {
+        letter-spacing: 3.5px;
     }
     .row ul {
         display: none;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding-top: 70px;
+        padding-top: 80px;
         background-color: rgba(5,4,33,.9);
         padding-bottom: 0;
+    }
+    .ion-drag {
+        font-size: 1.5em;
     }
     .row ul li {
         text-align: center;
         padding-right: 0;
-        margin-bottom: 20px;
-        border-bottom: 2px solid rgba(122,122,122,.4);
+        padding: 25px;
+        border-bottom: 2px solid rgba(122,122,122,.2);
         width: 100vw;
+        font-size: 16px;
+    }
+    .nav-first {
+        font-size: 20px;
     }
     #demo-nav-item{
-        border-top: 2px solid rgba(122,122,122,.4);
-        padding-top: 20px;
+        border-top: 2px solid rgba(122,122,122,.2);
     }
     #contact-nav-item {
         margin-bottom: 0;
@@ -103,13 +116,13 @@
 
 /* Center hero */
 @media all and (max-width: 650px), (orientation: portrait), 
-(orientation:landscape) and (max-aspect-ratio: 6/4) and (max-height: 1000px) {
+(orientation:landscape) and (max-aspect-ratio: 6/4) and (max-height: 900px) {
     .hero {
         width: 100%;
         margin: 0;
     }
     #hero-image {
-        max-width: 380px;
+        max-width: 340px;
         width: 70vw;
         min-width: 0;
         margin-top: -15vh;
@@ -118,7 +131,7 @@
     .main-banner-container {
         width: 100vw;
         justify-content: center;
-        margin-top: 70vh;
+        margin-top: 65vh;
     }
     #main-title {
         display: none;
@@ -135,7 +148,7 @@
         justify-content: center;
     }
     #contact {
-        width: 500px;
+        width: 400px;
     }
     .footer-row {
         background-image: none;
@@ -187,9 +200,20 @@
     }
 }
 
-/*Tweak for square shaped screens*/
-@media all and (min-aspect-ratio: 4/7) and (max-height: 600px) and (max-width:750px) {
+@media all and (orientation: portrait) and (max-width: 460px) {
     #hero-image {
-        max-width: 50vw;
+        width: 75vw;
+    }
+}
+
+@media all and (orientation: portrait) and (min-height: 800px) and (min-width: 850px) and (max-height: 900) {
+    #hero-image {
+        max-width: 400px;
+    }
+}
+
+@media all and (min-height: 700px) and (min-width: 700px) {
+    nav a {
+        font-weight: 100 !important;
     }
 }
