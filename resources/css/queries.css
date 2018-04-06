@@ -102,8 +102,8 @@
 }
 
 /* Center hero */
-@media all and (max-width: 650px), (orientation: portrait) {
-
+@media all and (max-width: 650px), (orientation: portrait), 
+(orientation:landscape) and (max-aspect-ratio: 6/4) and (max-height: 1000px) {
     .hero {
         width: 100%;
         margin: 0;
@@ -141,6 +141,35 @@
         background-image: none;
     }
 
+    footer, footer ul {
+        position: relative
+    }
+}
+
+/*Tweak hero for portrait iPhone X*/
+@media all and (orientation: portrait) and (min-height: 750px) {
+    #hero-image {
+        width: 90vw;
+    }
+}
+
+/*Tweak hero for portrait iPad */
+@media all and (orientation: portrait) and (min-height: 900px) {
+    #hero-image {
+        max-width: 500px;
+        width: 60vw;
+    }
+}
+
+/*Tweak hero for portrait iPad Pro */
+@media all and (orientation: portrait) and (min-height: 1100px) {
+    #hero-image {
+        max-width: 600px;
+        width: 67vw;
+    }
+    .main-banner {
+        width: 60vw;
+    }
 }
 
 /*Hide hero-image and center title on tiny screens*/
@@ -150,7 +179,17 @@
     }
     .main-banner-container{
         justify-content: center;
+        align-items: center;
         width: 100vw;
         min-width: 250px;
+        margin-top: auto;
+        height: 100vh;
+    }
+}
+
+/*Tweak for square shaped screens*/
+@media all and (min-aspect-ratio: 4/7) and (max-height: 600px) and (max-width:750px) {
+    #hero-image {
+        max-width: 50vw;
     }
 }
