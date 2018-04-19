@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100);
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 
 /**  
@@ -543,7 +543,8 @@ body {
 
 .btn {
 	font-family: Roboto;
-	color: #191919;
+	font-weight: 400;
+	color: rgba(50,50,50,1);
 	letter-spacing: 2px;
 }
 
@@ -573,7 +574,7 @@ input[type=submit] {
 	background-image: -webkit-linear-gradient(top, #DFDFDF 0%, #B4B1D7 100%);
 	background-image: -o-linear-gradient(top, #DFDFDF 0%, #B4B1D7 100%);
 	background-image: linear-gradient(-180deg, #DFDFDF 0%, #B4B1D7 100%);;
-    color: #030318;
+    /*color: rgba(35,35,35);*/
 }
 
 .btn-ghost:link,
@@ -631,12 +632,12 @@ input[type=submit]:active {
 	width: 70vw;
 	overflow: hidden;
 	position: relative;
-	border-radius: 15px;
+	border-radius: 25px;
 }
 
 .demo-content::before {
 	content: '';
-	background-image: url("img/hero.png");
+    background-image: url(img/hero.png);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -646,8 +647,9 @@ input[type=submit]:active {
 	top: -150px; bottom: -100px; left: -100px; right:-100px;
 	-webkit-box-shadow: inset 0 0 0 3000px rgba(19,20,51,0.3);
 	        box-shadow: inset 0 0 0 3000px rgba(19,20,51,0.3);
-	-webkit-filter: blur(20px);
-	        filter: blur(20px);
+	filter: blur(40px);
+	-webkit-backdrop-filter: blur(40px);
+
 }
 
 .demo-reel {
@@ -707,6 +709,11 @@ input[type=submit]:active {
 	    -ms-flex-align: start;
 	        align-items: flex-start;
 	flex-wrap: wrap;
+}
+
+.logos {
+	min-width: 96px;
+	margin: 0 12px;
 }
 
 
@@ -838,6 +845,7 @@ input[type=submit]:active {
 
 /***** CONTACT ******/
 
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
 .js--section-contact {
 	margin-top: 10vh;
 	height: 100vh;
