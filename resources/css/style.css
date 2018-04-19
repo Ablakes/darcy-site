@@ -633,6 +633,7 @@ input[type=submit]:active {
 	overflow: hidden;
 	position: relative;
 	border-radius: 25px;
+	min-height: 400px;
 }
 
 .demo-content::before {
@@ -641,7 +642,7 @@ input[type=submit]:active {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    height: 100vh;
+    height: 120vh;
     width: 300vh;
 	position: absolute;
 	top: -150px; bottom: -100px; left: -100px; right:-100px;
@@ -685,6 +686,7 @@ input[type=submit]:active {
 
 .recent-clients-title {
 	position: relative;
+	padding-top: 15px;
 	color: white;
 	font-family: Roboto;
 	text-transform: uppercase;
@@ -697,7 +699,6 @@ input[type=submit]:active {
 .client-logos {
 	position: relative;
 	right: -2px;
-	top: 1.5vh;
 	height: 30%;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -712,12 +713,17 @@ input[type=submit]:active {
 }
 
 .logos {
-	min-width: 96px;
-	margin: 0 12px;
+	width: 15%;
+	margin: 0 5px;
+	min-width: 110px;
+}
+
+#honda-logo {
+	margin: 0;
 }
 
 
-#marvel-logo {
+/*#marvel-logo {
 	padding: 12px 15px 0 10px;
 }
 
@@ -737,7 +743,7 @@ input[type=submit]:active {
 
 #pick-logo {
 	padding-top: 23px;	
-}
+}*/
 
 .recent-clients-first {
 	font-size: 22px;
