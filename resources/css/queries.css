@@ -1,22 +1,52 @@
 /* giant screens */
-@media all and (min-width: 1450px) {
-    #logo {
-        left: 12%;
+   @media all and (min-width: 1450px) {
+        .demo-content::before {
+            -webkit-background-size: contain;
+                 -o-background-size: contain;
+                    background-size: contain;
+        }
+         #logo {
+            left: 0;
+        }
+/*
+        #hero-image {
+            min-width: 300px;
+        }
+        .demo-content {
+            max-width: 1000px;
+        }
+        .demo-content {
+            background-color: rgba(3,2,20,.9);
+            border: 1px solid rgba(255,255,255,.1);
+            border-radius:10px;
+
+        }
+        .demo-content::before {
+            display: none;
+        }
+        .demo-reel {
+            background-color: rgba(255,255,255,.04);
+        }
+        .bio-text {
+            max-width: 900px;
+            max-height: 800px;
+        }
+        .carousel {
+            max-width: 1000px;
+        }
     }
-    #hero-image {
-        min-width: 300px;
+
+    @media all and (min-width: 1800px) {
+        .hero {
+            margin-left: 1%;
+            width: auto;
+        }*/
     }
-    .demo-content {
-        max-width: 1000px;
+    @media all and (min-width: 1850px) {
+        .hero {
+            margin-left: 0;
+        }
     }
-    .bio-text {
-        max-width: 900px;
-        max-height: 800px;
-    }
-    .carousel {
-        max-width: 1000px;
-    }
-}
 
 /*remove footer transluscent gradient*/
 @media all and (max-width: 800px), (max-height: 700) {
@@ -125,14 +155,20 @@
         display: block;
         width: 80vw;
     }
+    .demo-content {
+        background-color: rgba(3,2,20,.9);
+        border: 1px solid rgba(255,255,255,.1);
+        border-radius:10px;
+
+    }
     .demo-content::before {
-        content: '';
-        background-image: url("img/darcy-centered-new.jpg");
-        height: auto;
-        box-shadow: inset 0 0 0 3000px rgba(5,4,31,.6);
+        display: none;
     }
     .demo-reel {
-        background-color: rgba(255,255,255,.07);
+        background-color: rgba(255,255,255,.04);
+    }
+    .client-logos {
+        height: auto;
     }
     .form-container {
         max-width: 1000px;
@@ -169,7 +205,7 @@
             height: 60vh;
         }
         .demo-reel {
-            height: 30%;
+            height: 22vh;
         }
         .firePlayer {
             font-size: 16px;
@@ -189,9 +225,9 @@
         .demo-reel {
             height: 30%;
         }
-        .logos {
+        /*.logos {
             margin: 0 20px;
-        }
+        }*/
         .demo-reel {
             height: 37%;
         }

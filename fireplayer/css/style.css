@@ -34,7 +34,7 @@ main h1 span {
  @media all and (max-width: 510px) {
   .firePlayer {
     font-size: 16px;
-    margin: 2px;
+    margin: 8px;
     height: 67px;
   }
   .audio-title {
