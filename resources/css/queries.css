@@ -137,16 +137,16 @@
         margin: 0;
     }
     #hero-image {
-        max-width: 380px;
-        width: 70vw;
+        max-width: 350px;
+        width: 75vw;
         min-width: 0;
-        margin-top: -15vh;
+        margin-top: -22vh;
         margin-right: 3.5%;
     }
     .main-banner-container {
         width: 100vw;
         justify-content: center;
-        margin-top: 70vh;
+        margin-top: 69vh;
     }
     #main-title {
         display: none;
@@ -156,7 +156,7 @@
         width: 80vw;
     }
     .demo-content {
-        background-color: rgba(3,2,20,.9);
+        background-color: rgba(3,2,20,.93);
         border: 1px solid rgba(255,255,255,.1);
         border-radius:10px;
 
@@ -240,7 +240,7 @@
         }
         #mobile-title {
             width: 90vw;
-            max-width: 140%;
+            max-width: 153%;
         }
         .demo-content {
             width: 95vw;
@@ -297,12 +297,18 @@
 /*Tweak for square shaped screens*/
 @media all and (min-aspect-ratio: 4/7) and (max-height: 750px) and (max-width:750px) and (min-width: 600px) {
     #hero-image {
-        max-width: 50vw;
+        max-width: 40vw;
     }
 }
 
 @media all and (max-height: 600px), (max-width: 600px) {
     #hero-image {
     max-width: 50vh;
+    }
 }
+
+/*Bio section on small screens*/
+
+@media all and (max-width: 1200px) {
+    
 }
