@@ -2,10 +2,10 @@
 
 /* Photo carousel */
 
-$('.carousel-main').flickity({
-	freeScroll: true,
-	wrapAround: true
-});
+// $('.carousel-main').flickity({
+// 	freeScroll: true,
+// 	wrapAround: true
+// });
 
 // // 2nd carousel, navigation
 // $('.carousel-nav').flickity({

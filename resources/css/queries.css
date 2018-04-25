@@ -1,5 +1,5 @@
 /* giant screens */
-   @media all and (min-width: 1450px) {
+   @media all and (min-width: 1300px) {
         .demo-content::before {
             -webkit-background-size: contain;
                  -o-background-size: contain;
@@ -126,6 +126,10 @@
     }
     #contact-nav-item {
         margin-bottom: 0;
+    }
+    .bio-text {
+        width: 95vw;
+        padding: 4%;
     }
 }
 
@@ -309,6 +313,76 @@
 
 /*Bio section on small screens*/
 
-@media all and (max-width: 1200px) {
-    
+@media all and (max-width: 1300px) and (orientation:landscape){
+    .bio-text {
+        padding-right: 15vw;
+    }
+}
+
+@media all and (max-width: 1199px) and (max-height: 800px), (max-height: 700px), (max-width: 700px) {
+    .bio-headshot {
+        display: none;
+    }
+    .bio-text {
+        right: 0;
+        padding: 4% 7%;
+        font-size: 16px;
+        line-height: 23px;
+    }
+}
+
+@media all and (max-width: 800px) and (min-width: 651px) {
+    .bio-text {
+        width: 85vw;
+    }
+}
+
+@media all and (min-width:1450px) {
+    .bio-text {
+        width: 50vw;
+    }
+    .bio-headshot {
+        right: 13%;
+    }
+}
+
+/*Bio section 'show more' functionality*/
+@media all and (max-width:900px) and (max-height: 900px) {
+    .read-more-target {
+        opacity: 0;
+        max-height: 0;
+        font-size: 0;
+        transition: .25s ease;
+    }
+
+    .read-more-state:checked ~ .read-more-wrap .read-more-target {
+        opacity: 1;
+        font-size: inherit;
+        max-height: 999em;
+        top:0;
+    }
+
+    .read-more-state ~ .read-more-trigger:before {
+        content: 'Show more';
+    }
+
+    .read-more-state:checked ~ .read-more-trigger:before {
+        content: 'Show less';
+        
+    }
+
+    .read-more-trigger {
+        cursor: pointer;
+        display: inline-block;
+        padding: 0 .5em;
+        color: #666;
+        font-size: 16px;
+        line-height: 2;
+        border: 1px solid black;
+        border-radius: .25em;
+        position: relative;
+        /*top: -30px;*/
+        left: 25%;
+        z-index: 10000;
+    }
 }
