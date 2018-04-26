@@ -39,6 +39,11 @@ $(document).ready(function() {
 		$('html, body').animate({scrollTop: $('.js--section-contact').offset().top}, 400); 
 	});
 
+    $('.read-more-trigger').click(function () {
+        $('.read-more-trigger').toggleClass("lower-button");
+        $('.dots').toggleClass("hide-dots");
+    });
+
 $('.js--nav-icon, .js--main-nav a, .logo-black').click(function(element){
         var nav = $('.js--main-nav');
         var icon = $('.js--nav-icon i');
