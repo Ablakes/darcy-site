@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 
 /**  
@@ -396,8 +396,8 @@ body {
 }
 
 #logo {
-	height: 45px;
-	top: 15px;
+    height: 50px;
+    top: 13px;
 	left: 35%;
 	position: relative;
 	z-index: 1000;
@@ -413,7 +413,7 @@ nav {
 nav a {
 	text-decoration: none;
 	color: #F0F0F0;
-	font-family: Roboto;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 	letter-spacing: 2px;
 	padding: 8px;
@@ -423,7 +423,7 @@ nav a {
 
 nav a:hover {
 	text-decoration: none;
-	font-family: Roboto;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 100;
 	letter-spacing: 2px;
 	color: #F0F0F0;
@@ -488,17 +488,6 @@ nav li a:active {
 	        justify-content: flex-end;
 }
 
-.mobile-nav-icon {
-	display: none;
-	/*position: absolute;
-	top: 15px;
-	right: 30px;*/
-}
-
-.ion-drag, .ion-close-round {
-	color: #F0F0F0;
-}
-
 /***** HERO ******/
 
 html {
@@ -513,7 +502,7 @@ body {
     /*background-image: url("img/hero2.png");*/
 	height: 100vh;
 	width: 30vw;
-	margin-left: 4%;
+	margin-left: 10vw;
 	position: fixed;
 	display: flex;
 	justify-content: center;
@@ -521,7 +510,7 @@ body {
 }
 
 .main-banner-container {
-	width: 87vw;
+	width: 93vw;
 	margin-top: 40vh;
 	display: flex;
 	justify-content: flex-end;
@@ -556,10 +545,11 @@ body {
 /* ----- BUTTONS ----- */
 
 .btn {
-	font-family: Roboto;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 	color: rgba(50,50,50,1);
 	letter-spacing: 2px;
+	border: none !important;
 }
 
 .btn-full {
@@ -609,13 +599,7 @@ input[type=submit]:active {
 
 .btn-full:hover,
 .btn-full:active {
-    border: 1px solid #DBD9E9;
-}
-
-.btn-ghost:hover,
-.btn-ghost:active {
-    border: 1px solid #DBD9E9;
-    color: #fff;
+    color: rgba(35,35,35,1);
 }
 
 
@@ -668,7 +652,9 @@ input[type=submit]:active {
 }
 
 .demo-reel {
-	background-color: rgba(255,255,255,.03);
+	/*background-color: rgba(255,255,255,.06);*/ 	
+	/*background-color: rgba(85,70,97,.3);*/
+	background-image: linear-gradient(153deg, rgba(33,46,95,.3) 0%, rgba(85,70,97,.3) 96%);
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -681,6 +667,10 @@ input[type=submit]:active {
 	width: 100%;
 	height: 50%;
 	position: relative;
+}
+
+.clients-section {
+
 }
 
 .recent-clients {
@@ -702,7 +692,7 @@ input[type=submit]:active {
 	position: relative;
 	padding-top: 15px;
 	color: white;
-	font-family: Roboto;
+	font-family: 'Roboto', sans-serif;
 	text-transform: uppercase;
 	color: #F0F0F0;
 	letter-spacing: 2.5px;
@@ -787,8 +777,14 @@ input[type=submit]:active {
 	top: 10vh;
 }
 
+.bio-container {
+	display: flex;
+    align-items: center;
+}
+
 .bio-title {
 	font-family: 'Playfair Display', serif;
+	letter-spacing: 2.5px;
 	font-weight: 300;
 	text-align: center;
 	font-size: 20px;
@@ -796,11 +792,11 @@ input[type=submit]:active {
 }
 
 .bio-hr {
-	margin: 14px 0;
+	margin: 24px 0;
     border: 0;
     height: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.3);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 2px solid rgba(255,255,255,.70)
 }
 
 .bio-first {
@@ -808,23 +804,50 @@ input[type=submit]:active {
 }
 
 .bio-text {
+	/*color: rgba(255,255,255,.75);*/
+	border-radius: 8px;
 	z-index: 100;
+	/*box-shadow: 0px 0px 20px rgba(255,255,255,.2);*/
+	/*background-color: rgba(5,4,36,.9);*/
+	/*background-image: linear-gradient(-154deg, #251457 0%, #290D35 100%);*/
+	
+/* Rectangle 11 Copy: */
+	/*background-image: linear-gradient(154deg, #374E8A 0%, #97708F 100%);*/
+	
+	/*keeper*/
+	/*background-image: linear-gradient(154deg, rgba(33,46,95,.97)  0%, rgba(79,59,84,.97) 100%);*/
+
+	/* Rectangle 11 Copy: */
+opacity: 0.97;
+background-image: linear-gradient(153deg, #212E5F 0%, #4F3B54 96%);
+/* Rectangle 11 Copy 3: */
+background-image: linear-gradient(136deg, #0E1031 0%, #221B33 98%);
+
+
+
+
+	color: #BEBEBE;
+
 
     position: relative;
     right: 7%;
 	width: 70vw;
-	outline: 3px solid #430F25;
+/*	outline: 3px solid #430F25;
 	background: url(img/cloth.jpg);
 	-webkit-background-size: cover;
 	     -o-background-size: cover;
-	        background-size: cover;
-	padding: 3% 15% 5% 7%;
-	font-family: Roboto-Light;
-	font-weight: 400;
+	        background-size: cover;*/
+	padding: 3% 15% 2% 7%;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
 	font-size: 18px;
-	color: #030214;
+	
 	letter-spacing: 0.67px;
 	line-height: 28px;
+}
+
+.dots {
+	display: none;
 }
 
 .bio-headshot {
@@ -834,7 +857,7 @@ input[type=submit]:active {
 	        background-size: contain;*/
 	z-index: 1000;
 	position: absolute;
-	right: 3%;
+	right: 6%;
 
 	max-width: 312px;
 	box-shadow: 0 8px 27px 0 rgba(0,0,0,0.31);
@@ -843,27 +866,35 @@ input[type=submit]:active {
 /***** PHOTO CAROUSEL ******/
 
 .js--section-photo {
-	background-color: rgba(0,0,0,.9);
+	/*background-color: rgba(0,0,0,.9);*/
+	/*background-image: linear-gradient(153deg, rgba(33,46,95,1) 0%, rgba(85,70,97,1) 96%);*/
+	/* Rectangle 11 Copy 2: */
+/*background-image: linear-gradient(-153deg, #151C45 0%, #312741 96%);*/
+/* Rectangle 11 Copy 3: */
+background-image: linear-gradient(-136deg, #0E1031 0%, #221B33 98%);
+border-radius: 8px;
 	position: relative;
 	height: 100vh;
 }
 .carousel {
-	
 	overflow: hidden;
 	position: relative;
 	z-index: 0;
-	top: 11vh;
 	width: 50vw;
-	height: 81vh;
 	margin: 50vh auto;
+
+    border-radius: 10px;
+	top: 3vh;
+    padding-top: 6vh;
+    height: 80vh;
 }
 
 .main-carousel-images {
 	max-width: 100%;
 	margin-right: 5vw;
 	margin-left: 5vw;
-	height: 75vh;
-	width: 50vh !important;
+    height: 65vh;
+    width: 43.3vh !important;
 	max-height: 750px;
 	max-width: 500px;
 	margin: 0 auto;
@@ -910,7 +941,7 @@ input[type=submit]:active {
 
 /***** CONTACT ******/
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
+
 .js--section-contact {
 	margin-top: 10vh;
 	height: 100vh;
@@ -927,6 +958,7 @@ input[type=submit]:active {
 }
 
 .form-container {
+	top: -3vh;
 	margin-left: 49.7%;
 	max-width: 500px;
 	width: 100%;
@@ -938,10 +970,12 @@ input[type=submit]:active {
 #contact input[type="tel"],
 #contact textarea,
 #contact button[type="submit"] {
- 	font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+ 	font: 400 16px/16px "Roboto", Helvetica, Arial, sans-serif;
+ 	color: rgba(20,20,20,1);
 }
 
 #contact {
+	/*box-shadow: 0px 0px 20px rgba(255,255,255,.2);*/
 	margin: 0 0 20px 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -954,17 +988,23 @@ input[type=submit]:active {
 	text-rendering: optimizeLegibility;
 	font-family: "Roboto", Helvetica, Arial, sans-serif;
  	font-weight: 300;
- 	font-size: 12px;
+ 	font-size: 16px;
  	line-height: 30px;
- 	color: #777;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#EDEDED), to(#DEDEDE));
+ 	color: rgba(20,20,20,1);
+/*	background-image: -webkit-gradient(linear, left top, left bottom, from(#EDEDED), to(#DEDEDE));
 	background-image: -webkit-linear-gradient(top, #EDEDED 0%, #DEDEDE 100%);
 	background-image: -o-linear-gradient(top, #EDEDED 0%, #DEDEDE 100%);
-	background-image: linear-gradient(-180deg, #EDEDED 0%, #DEDEDE 100%);
+	background-image: linear-gradient(-180deg, #EDEDED 0%, #DEDEDE 100%);*/
+	/*background-color: rgba(5,4,36,.9);*/
+	/*background: linear-gradient(-45deg, rgba(92,110,158,.93) 0%, rgba(168,198,188,.93) 100%);*/
+	/*background-image: linear-gradient(-154deg, #251457 0%, #290D35 100%);*/
+/* Rectangle 11 Copy 2: */
+/* Rectangle 11 Copy 3: */
+background-image: linear-gradient(-136deg, #0E1031 0%, #221B33 98%);
 
+
+	opacity:1;
  	padding: 25px;
- 	-webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
- 	        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
 .contact-title {
@@ -981,7 +1021,8 @@ input[type=submit]:active {
   font-size: 30px;
   font-weight: 300;
   margin-bottom: 20px;
-  color: rgb(40,40,40);
+  /*color: rgb(40,40,40);*/
+  color: rgba(255,255,255,.75)
 }
 
 #contact h4 {
@@ -1004,11 +1045,12 @@ fieldset {
 #contact input[type="tel"],
 #contact input[type="url"],
 #contact textarea {
-  width: 100%;
-  border: 1px solid #ccc;
-  background: #FFF;
-  margin: 0 0 5px;
-  padding: 10px;
+	border-radius: 4px;
+	width: 100%;
+	border: 1px solid #ccc;
+	background: #C1C2E0;
+	margin: 0 0 5px;
+	padding: 10px;
 }
 
 #contact input[type="text"]:hover,
@@ -1016,50 +1058,53 @@ fieldset {
 #contact input[type="tel"]:hover,
 #contact input[type="url"]:hover,
 #contact textarea:hover {
-  -webkit-transition: border-color 0.3s ease-in-out;
-  -o-transition: border-color 0.3s ease-in-out;
-  transition: border-color 0.3s ease-in-out;
-  border: 1px solid #7D7D7D;
+	-webkit-transition: border-color 0.3s ease-in-out;
+	-o-transition: border-color 0.3s ease-in-out;
+	transition: border-color 0.3s ease-in-out;
+	border: 1px solid #41001B;
 }
 
 #contact textarea {
-  height: 150px;
-  max-width: 100%;
-  resize: none;
+	height: 150px;
+	max-width: 100%;
+	resize: none;
 }
 
 #contact button[type="submit"] {
-  cursor: pointer;
-  width: 100%;
-  border: none;
-  background: #5C0B2D;
-  color: #FFF;
-  margin: 0 0 5px;
-  padding: 10px;
-  font-size: 15px;
+	cursor: pointer;
+	width: 100%;
+	border: none;
+	/*background: #5C0B2D;*/
+	background-color: #41001B;
+	color: #F0F0F0;
+	margin: 0 0 5px;
+	padding: 10px;
+	font-size: 17px;
+	letter-spacing: 1px;
+	border-radius: 4px;
 }
 
 #contact button[type="submit"]:hover {
-  background: #43A047;
-  -webkit-transition: background 0.3s ease-in-out;
-  -webkit-transition: background-color 0.3s ease-in-out;
-  -o-transition: background-color 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
+	background: #590025;
+	-webkit-transition: background 0.3s ease-in-out;
+	-webkit-transition: background-color 0.3s ease-in-out;
+	-o-transition: background-color 0.3s ease-in-out;
+	transition: background-color 0.3s ease-in-out;
 }
 
 #contact button[type="submit"]:active {
-  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
-          box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+	      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .copyright {
-  text-align: center;
+	text-align: center;
 }
 
 #contact input:focus,
 #contact textarea:focus {
-  outline: 0;
-  border: 1px solid #aaa;
+	outline: 0;
+	border: 1px solid #aaa;
 }
 
 ::-webkit-input-placeholder {
@@ -1192,28 +1237,75 @@ footer ul {
     font-size: 110%;
 }
 
-.ion-social-facebook,
-.ion-social-twitter,
-.ion-social-googleplus,
-.ion-social-instagram {
+/*Icons*/
+
+.mobile-nav-icon {
+	display: none;
+}
+
+.fa-bars, .fa-times {
+	color: #F0F0F0;;
+	font-size: 35px;
+	top: -2px;
+	text-shadow: none;
+}
+
+.down-arrow {
+	color: #F0F0F0;
+	margin: 20px 3px 0 0;
+	font-size: 50px;
+	z-index:1000;
+}
+
+.down-arrow:hover {
+	color: rgba(20,20,20,1);
+	text-shadow: 0 0px 20px white;
+}
+
+.contact-arrow-container, .up-arrow-container {
+	margin-top: -20vh;
+    z-index: 1000;
+    position: relative;
+    display: flex;
+    justify-content: center;	
+}
+
+.up-arrow-container {
+	margin-top: -23vh;
+}
+
+.content-container {
+	width: 100vw;
+	display: flex;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	align-items: center;
+}
+
+
+.fa-facebook-square,
+.fa-twitter,
+.fa-google-plus-g,
+.fa-instagram {
     -webkit-transition: color 0.2s;
     -o-transition: color 0.2s;
     transition: color 0.2s;
 }
 
-.ion-social-facebook:hover {
+.fa-facebook-square:hover {
     color: #3b5998;
 }
 
-.ion-social-twitter:hover {
+.fa-twitter:hover {
     color: #00aced;
 }
 
-.ion-social-googleplus:hover {
+.fa-google-plus-g:hover {
     color: #dd4b39;
 }
 
-.ion-social-instagram:hover {
+.fa-instagram:hover {
     color: #517fa4;
 }
 

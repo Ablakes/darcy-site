@@ -52,7 +52,7 @@ $('.js--nav-icon, .js--main-nav a, .logo-black').click(function(element){
         var clicked = element.target.className;
 
         //Exists the function if the menu is closed AND the logo-black element (logo image) was clicked
-        if (icon.hasClass('ion-drag') && clicked == 'logo-black')
+        if (icon.hasClass('.fa-bars') && clicked == 'logo-black')
             return;
 
         //Opens and closes the menu
@@ -61,12 +61,12 @@ $('.js--nav-icon, .js--main-nav a, .logo-black').click(function(element){
         }
 
         //Changes icon states of the menu button
-        if (icon.hasClass('ion-drag')) {
-            icon.addClass('ion-close-round');
-            icon.removeClass('ion-drag');
+        if (icon.hasClass('fa-bars')) {
+            icon.addClass('fa-times');
+            icon.removeClass('fa-bars');
         } else {
-            icon.addClass('ion-drag');
-            icon.removeClass('ion-close-round');
+            icon.addClass('fa-bars');
+            icon.removeClass('fa-times');
         }
     });
 

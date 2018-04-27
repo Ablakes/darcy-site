@@ -5,9 +5,9 @@
                  -o-background-size: contain;
                     background-size: contain;
         }
-         #logo {
+/*         #logo {
             left: 0;
-        }
+        }*/
 /*
         #hero-image {
             min-width: 300px;
@@ -83,12 +83,13 @@
 
 /*Switch to hamburger*/
 @media all and (max-width: 650px) {
-        #logo {
+    #logo {
         position: fixed;
-        top: 13px;
-        left: 3px;
-        height: 35px;
+        top: 17px;
+        left: 13px;
+        height: 40px;
     }
+
     .mobile-nav-icon {
         z-index: 1000;
         display: block;
@@ -127,8 +128,16 @@
     .bio-text {
         width: 95vw;
         padding: 4%;
+/*        background-image: none;
+        outline: none;
+        border-top: 3px solid #430F25;
+        background-color: rgba(5,4,36,.9);
+        box-shadow: 0 0 20px 0 rgba(255, 255, 255, .05), 0 5px 5px 0 rgba(255, 255, 255, .05);
+        color: rgba(255,255,255,.75);*/
     }
 }
+
+
 
 /* Center hero */
 @media all and (max-width: 650px), (orientation: portrait), 
@@ -163,13 +172,12 @@
         background-color: rgba(3,2,20,.93);
         border: 1px solid rgba(255,255,255,.1);
         border-radius:10px;
-
     }
     .demo-content::before {
         display: none;
     }
     .demo-reel {
-        background-color: rgba(255,255,255,.04);
+        /*background-color: rgba(255,255,255,.04);*/
     }
     .client-logos {
         height: auto;
@@ -206,10 +214,10 @@
             margin: 0 2px;
         }
         .demo-content {
-            height: 60vh;
+            height: 75vh;
         }
         .demo-reel {
-            height: 22vh;
+            height: 32vh;
         }
         .firePlayer {
             font-size: 16px;
@@ -348,6 +356,9 @@
 
 /*Bio section 'show more' functionality*/
 @media all and (max-width:900px) and (max-height: 900px) {
+    .dots {
+        display: inline;
+    }
     .read-more-target {
         opacity: 0;
         max-height: 0;
@@ -373,11 +384,11 @@
     .read-more-trigger {
         cursor: pointer;
         display: inline-block;
-        padding: 0 .5em;
-        color: #430F25;
+        padding: 0 .7em;
+        color: rgba(255,255,255,.75);
         font-size: 16px;
         line-height: 2;
-        border: 1px solid #430F25;
+        border: 2px solid rgba(255,255,255,.75);
         border-radius: .25em;
         position: relative;
         top: -30px;
@@ -406,6 +417,12 @@
     .carousel {
         width: 85vw;
     }   
+}
+
+@media all and (max-width: 450px) {
+    .carousel {
+        background-color: rgba(0,0,0,0);
+    }
 }
 
 /*Contact form on narrow screens */
