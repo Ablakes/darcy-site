@@ -42,6 +42,10 @@ $(document).ready(function() {
     $('.read-more-trigger').click(function () {
         $('.read-more-trigger').toggleClass("lower-button");
         $('.dots').toggleClass("hide-dots");
+        $('.read-more-text').toggleClass("hide-dots");
+        $('.read-less-text').toggleClass("show-text");
+        $('.read-more-wrap').toggleClass("lower-read-more");
+        $('.js--section-bio').toggleClass("extend-bio");
     });
 
 $('.js--nav-icon, .js--main-nav a, .logo-black').click(function(element){

@@ -78,6 +78,16 @@ main h1 span {
   display: none;
 }
 
+@media all and (max-width:350px) {
+  .audio-current-time {
+      margin-left: -10px;
+  }
+
+  .audio-length {
+      margin-right: -10px;
+  }
+}
+
 .progress-wrap {
   width: 100%;
   display: flex;
