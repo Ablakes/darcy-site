@@ -664,11 +664,6 @@ input[type=submit]:active {
 	        align-items: center;
 }
 
-.demo-section {
-
-}
-
-
 .demo-content {
 	margin-top: -3vh;
 	height: 50vh;
@@ -908,6 +903,7 @@ input[type=submit]:active {
     padding-top: 6vh;
     height: 80vh;
     min-height: 500px;
+    max-height: 850px;
 }
 
 .main-carousel-images {
@@ -918,8 +914,8 @@ input[type=submit]:active {
     min-width: 266px;
     height: 65vh;
     width: 43.3vh !important;
-	max-height: 750px;
-	max-width: 500px;
+    max-height: 730px;
+    max-width: 485px;
 	margin: 0 auto;
 }
 
@@ -1276,7 +1272,17 @@ footer ul {
     color: #517fa4;
 }
 
-
 .read-more-state {
+	display: none;
+}
+
+/*Random tweaks*/
+
+
+section {
+	min-height: 700px !important;
+}
+
+.close-icon {
 	display: none;
 }
