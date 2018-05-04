@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 
 /**  
@@ -617,25 +617,19 @@ input[type=submit] {
 	background-image: linear-gradient(-180deg, #DFDFDF 0%, #B4B1D7 100%);;
 }
 
-.btn-ghost:link,
-.btn-ghost:visited {
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#DBDAEB), to(#B4B1D7));
-	background-image: -webkit-linear-gradient(top, #DBDAEB 0%, #B4B1D7 100%);
-	background-image: -o-linear-gradient(top, #DBDAEB 0%, #B4B1D7 100%);
-	background-image: linear-gradient(-180deg, #DBDAEB 0%, #B4B1D7 100%);;
-    color: #DBD9E9;
-}
-
 .btn:hover,
 .btn:active,
 input[type=submit]:hover,
 input[type=submit]:active {
-    background-color: #DBD9E9;
+	background-image: -webkit-linear-gradient(#B4B1D7 0%, #DFDFDF 100%);
+	background-image: -o-linear-gradient(#B4B1D7 0%, #DFDFDF 100%);
+	background-image: linear-gradient(#B4B1D7 0%, rgba(190,190,190) 100%);
 }
 
-.btn-full:hover,
+
 .btn-full:active {
-    color: rgba(35,35,35,1);
+    /*color: rgba(35,35,35,1);*/
+    box-shadow: inset 0 0 10px rgba(0,0,0,1);
 }
 
 
@@ -651,8 +645,8 @@ input[type=submit]:active {
 
 .js--section-demo {
 	position: relative;
+	z-index:99;
 	height: 100vh;
-	z-index: 101;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -676,7 +670,7 @@ input[type=submit]:active {
 
 .demo-content::before {
 	content: '';
-    background-image: url(img/hero.png);
+    background-image: url(../img/hero.png);
     background-size: contain;
     background-position: center;
     background-attachment: fixed;
@@ -792,8 +786,6 @@ input[type=submit]:active {
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	position: relative;
-	z-index: 101;
 }
 
 .bio-container {
@@ -848,8 +840,12 @@ input[type=submit]:active {
 	display: none;
 }
 
-.read-more-wrap {
+/*.read-more-wrap {
 	margin-bottom: 0;
+}*/
+
+.read-more-trigger {
+	display: none;
 }
 
 .lower-read-more {
@@ -896,7 +892,7 @@ input[type=submit]:active {
 	overflow: hidden;
 	position: relative;
 	z-index: 0;
-	width: 50vw;
+	width: 45vw;
 	margin: 0 auto;
     border-radius: 10px;
 	top: 3vh;
@@ -948,7 +944,6 @@ section {
 .form-container {
 	margin-bottom: 100px;
 	margin-left: 49.7%;
-	max-width: 500px;
 	width: 100%;
 	position: relative;
 }
@@ -960,6 +955,7 @@ section {
 #contact button[type="submit"] {
  	font: 400 16px/16px "Roboto", Helvetica, Arial, sans-serif;
  	color: rgba(20,20,20,1);
+ 	border: 2px solid #EDEDED;
 }
 
 #contact {
@@ -1034,10 +1030,11 @@ fieldset {
 #contact input[type="tel"]:hover,
 #contact input[type="url"]:hover,
 #contact textarea:hover {
-	-webkit-transition: border-color 0.3s ease-in-out;
+/*	-webkit-transition: border-color 0.3s ease-in-out;
 	-o-transition: border-color 0.3s ease-in-out;
 	transition: border-color 0.3s ease-in-out;
-	border: 1px solid #41001B;
+	border: 1px solid #41001B;*/
+	outline: 2px solid #6B002D;
 }
 
 #contact textarea {
@@ -1060,11 +1057,12 @@ fieldset {
 }
 
 #contact button[type="submit"]:hover {
-	background: #590025;
+
 	-webkit-transition: background 0.3s ease-in-out;
 	-webkit-transition: background-color 0.3s ease-in-out;
 	-o-transition: background-color 0.3s ease-in-out;
 	transition: background-color 0.3s ease-in-out;
+	background-color: #520022;
 }
 
 #contact button[type="submit"]:active {
@@ -1079,7 +1077,7 @@ fieldset {
 #contact input:focus,
 #contact textarea:focus {
 	outline: 0;
-	border: 1px solid #aaa;
+	outline: 3px solid #6B002D;
 }
 
 ::-webkit-input-placeholder {
@@ -1205,7 +1203,7 @@ footer ul {
 
 .down-arrow:hover {
 	color: rgba(20,20,20,1);
-	text-shadow: 0 0px 20px white;
+	text-shadow: 0 0px 20px rgba(255,255,255,.4);
 }
 
 .contact-arrow-container {
@@ -1249,7 +1247,7 @@ footer ul {
 
 .fa-facebook-square,
 .fa-twitter,
-.fa-google-plus-g,
+.fa-envelope,
 .fa-instagram {
     -webkit-transition: color 0.2s;
     -o-transition: color 0.2s;
@@ -1264,7 +1262,7 @@ footer ul {
     color: #00aced;
 }
 
-.fa-google-plus-g:hover {
+.fa-envelope:hover {
     color: #dd4b39;
 }
 
@@ -1285,4 +1283,9 @@ section {
 
 .close-icon {
 	display: none;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    width: 35px !important;
+	height: 35px !important;
 }
