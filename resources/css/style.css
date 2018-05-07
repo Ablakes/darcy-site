@@ -514,6 +514,7 @@ body {
 }
 
 .hero {
+	max-height: 90vh;
 	height: 100vh;
 	width: 30vw;
 	margin-left: 10vw;
@@ -624,12 +625,17 @@ input[type=submit]:active {
 	background-image: -webkit-linear-gradient(#B4B1D7 0%, #DFDFDF 100%);
 	background-image: -o-linear-gradient(#B4B1D7 0%, #DFDFDF 100%);
 	background-image: linear-gradient(#B4B1D7 0%, rgba(190,190,190) 100%);
+	transition: background-image .2s ease;
 }
 
 
 .btn-full:active {
     /*color: rgba(35,35,35,1);*/
     box-shadow: inset 0 0 10px rgba(0,0,0,1);
+}
+
+.btn-full:hover {
+	color: rgb(20,20,20);
 }
 
 
@@ -955,12 +961,14 @@ section {
 #contact button[type="submit"] {
  	font: 400 16px/16px "Roboto", Helvetica, Arial, sans-serif;
  	color: rgba(20,20,20,1);
- 	border: 2px solid #EDEDED;
+ 	border: none !important;
+ 	box-shadow: inset 0 0 5px rgba(20,20,20,.8);
 }
 
 #contact {
 	margin: 0 0 20px 0;
 	padding: 0;
+	border-radius: 5px;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -1030,11 +1038,11 @@ fieldset {
 #contact input[type="tel"]:hover,
 #contact input[type="url"]:hover,
 #contact textarea:hover {
-/*	-webkit-transition: border-color 0.3s ease-in-out;
-	-o-transition: border-color 0.3s ease-in-out;
-	transition: border-color 0.3s ease-in-out;
+	/*	-webkit-transition: border-color 0.3s ease-in-out;
+		-o-transition: border-color 0.3s ease-in-out;
+		transition: border-color 0.3s ease-in-out;
 	border: 1px solid #41001B;*/
-	outline: 2px solid #6B002D;
+	border: 2px solid #6B002D;
 }
 
 #contact textarea {
@@ -1077,7 +1085,7 @@ fieldset {
 #contact input:focus,
 #contact textarea:focus {
 	outline: 0;
-	outline: 3px solid #6B002D;
+	outline: 2px solid #6B002D;
 }
 
 ::-webkit-input-placeholder {
@@ -1141,6 +1149,8 @@ footer ul {
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
+	position: relative;
+	z-index:121;
 }
 
 .footer-nav li,
@@ -1176,7 +1186,7 @@ footer ul {
 
 .fas {
 	position: relative;
-	z-index: 1000;
+	z-index: 120;
 }
 
 .mobile-nav-icon {
@@ -1186,7 +1196,7 @@ footer ul {
 .fa-bars, .fa-times {
 	color: #F0F0F0;;
 	font-size: 35px;
-	top: -2px;
+	top: 2px;
 	text-shadow: none;
 }
 
@@ -1194,7 +1204,7 @@ footer ul {
 	color: #F0F0F0;
 	margin: 20px 7px 0 0;
 	font-size: 50px;
-	z-index:1000;
+	z-index:120;
 }
 
 .first-two-arrows {
@@ -1203,12 +1213,13 @@ footer ul {
 
 .down-arrow:hover {
 	color: rgba(20,20,20,1);
+	transition: color 0.3s ease;
+	transition: text-shadow 0.3s ease;
 	text-shadow: 0 0px 20px rgba(255,255,255,.4);
 }
 
 .contact-arrow-container {
 	margin-top: -20vh;
-    z-index: 1000;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1278,7 +1289,7 @@ footer ul {
 
 
 section {
-	min-height: 700px !important;
+	min-height: 667px !important;
 }
 
 .close-icon {

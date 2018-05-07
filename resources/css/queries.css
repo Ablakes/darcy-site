@@ -1,50 +1,10 @@
-/*mobile bgc 
-background-image: linear-gradient(153deg, #212E5F 0%, #4F3B54 96%);
-*/
-
 /* giant screens */
    @media all and (min-width: 1300px) {
         .demo-content::before {
             -webkit-background-size: contain;
                  -o-background-size: contain;
                     background-size: contain;
-        }
-/*         #logo {
-            left: 0;
-        }*/
-/*
-        #hero-image {
-            min-width: 300px;
-        }
-        .demo-content {
-            max-width: 1000px;
-        }
-        .demo-content {
-            background-color: rgba(3,2,20,.9);
-            border: 1px solid rgba(255,255,255,.1);
-            border-radius:10px;
-
-        }
-        .demo-content::before {
-            display: none;
-        }
-        .demo-reel {
-            background-color: rgba(255,255,255,.04);
-        }
-        .bio-text {
-            max-width: 900px;
-            max-height: 800px;
-        }
-        .carousel {
-            max-width: 1000px;
-        }
     }
-
-    @media all and (min-width: 1800px) {
-        .hero {
-            margin-left: 1%;
-            width: auto;
-        }*/
     }
     @media all and (min-width: 1850px) {
         .hero {
@@ -88,19 +48,18 @@ background-image: linear-gradient(153deg, #212E5F 0%, #4F3B54 96%);
 /*Switch to hamburger*/
 @media all and (max-width: 650px) {
     #logo {
-/*        position: fixed;
+        position: fixed;
         top: 17px;
         left: 13px;
-        height: 40px;*/
-        display: none;
+        height: 35px;
+        /*display: none;*/
     }
 
     .mobile-nav-icon {
         z-index: 1000;
         display: block;
-        font-size: 1.7em;
         position: fixed;
-        top: 0;
+        top: 5px;
         right: 15px;
     }
     nav li a:hover,
@@ -113,20 +72,19 @@ background-image: linear-gradient(153deg, #212E5F 0%, #4F3B54 96%);
         justify-content: center;
         align-items: center;
         padding-top: 70px;
-        background-image: linear-gradient(153deg, rgba(21,28,69,.97) 0%, rgba(49,39,65,.97) 96%);
+        background-image: -webkit-linear-gradient(top left, #030212 0%, #120435 100%);
+        background-image: -o-linear-gradient(top left, #030212 0%, #120435 100%);
+        background-image: linear-gradient(to bottom right, #030212 0%, #120435 100%);
         padding-bottom: 0;
     }
-    
     .bio-text, .js--section-photo, #contact {
-        background-image: -webkit-linear-gradient(63deg, #151C45 0%, #312741 96%);
-        background-image: -o-linear-gradient(63deg, #151C45 0%, #312741 96%);
-        background-image: linear-gradient(153deg, #151C45 0%, #312741 96%);
+        background-image: -webkit-linear-gradient(40deg, #060526 0%, #17043B 100%);
+        background-image: -o-linear-gradient(40deg, #060526 0%, #17043B 100%);
+        background-image: linear-gradient(130deg, #060526 0%, #17043B 100%);
     }
-    
     .demo-reel {
-        background-image: linear-gradient(153deg, rgba(21,28,69,.4) 0%, rgba(49,39,65,.4) 96%)
+        background-image: linear-gradient(153deg, rgba(21,28,69,.6) 0%, rgba(49,39,65,.5) 96%)
     }
-
     .row ul li {
         text-align: center;
         padding-right: 0;
@@ -144,16 +102,8 @@ background-image: linear-gradient(153deg, #212E5F 0%, #4F3B54 96%);
     .bio-text {
         width: 95vw;
         padding: 4%;
-/*        background-image: none;
-        outline: none;
-        border-top: 3px solid #430F25;
-        background-color: rgba(5,4,36,.9);
-        box-shadow: 0 0 20px 0 rgba(255, 255, 255, .05), 0 5px 5px 0 rgba(255, 255, 255, .05);
-        color: rgba(255,255,255,.75);*/
     }
 }
-
-
 
 /* Center hero */
 @media all and (max-width: 650px), (orientation: portrait), 
@@ -166,8 +116,8 @@ background-image: linear-gradient(153deg, #212E5F 0%, #4F3B54 96%);
         max-width: 350px;
         width: 75vw;
         min-width: 0;
-        margin-top: -22vh;
-        margin-right: 3.5%;
+        margin-top: -24vh;
+        margin-right: 1.5%;
     }
     .main-banner-container {
         width: 100vw;
@@ -182,7 +132,7 @@ background-image: linear-gradient(153deg, #212E5F 0%, #4F3B54 96%);
         width: 80vw;
     }
     #midline {
-    top: 90vh;
+        top: 90vh;
     }
     .demo-content {
         background-color: rgba(3,2,20,.93);
@@ -191,9 +141,6 @@ background-image: linear-gradient(153deg, #212E5F 0%, #4F3B54 96%);
     }
     .demo-content::before {
         display: none;
-    }
-    .demo-reel {
-        /*background-color: rgba(255,255,255,.04);*/
     }
     .client-logos {
         height: auto;
@@ -252,9 +199,6 @@ background-image: linear-gradient(153deg, #212E5F 0%, #4F3B54 96%);
         .demo-reel {
             height: 30%;
         }
-        /*.logos {
-            margin: 0 20px;
-        }*/
         .demo-reel {
             height: 37%;
         }
@@ -319,8 +263,6 @@ background-image: linear-gradient(153deg, #212E5F 0%, #4F3B54 96%);
     }
 }
 
-
-
 /*Tweak for square shaped screens*/
 @media all and (min-aspect-ratio: 4/7) and (max-height: 750px) and (max-width:750px) and (min-width: 600px) {
     #hero-image {
@@ -384,9 +326,6 @@ background-image: linear-gradient(153deg, #212E5F 0%, #4F3B54 96%);
         line-height: 2;
         border: 2px solid rgba(255,255,255,.75);
         border-radius: .25em;
-        /*position: relative;
-        top: -30px;
-        left: 31%;*/
         z-index: 10000;
     }
     .label-container {
