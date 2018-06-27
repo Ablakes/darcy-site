@@ -1,33 +1,23 @@
-$(document).ready(function () {
+$(document).ready(function() {
     /* Scroll on buttons */
     $('.scroll-to-demo').click(function () {
-        $('html, body').animate({
-            scrollTop: $('.js--section-demo').offset().top
-        }, 400);
+        $('html, body').animate({scrollTop: $('.js--section-demo').offset().top}, 400); 
     });
 
     $('.scroll-to-photo').click(function () {
-        $('html, body').animate({
-            scrollTop: $('.js--section-photo').offset().top
-        }, 400);
+        $('html, body').animate({scrollTop: $('.js--section-photo').offset().top}, 400); 
     });
 
     $('.scroll-to-home').click(function () {
-        $('html, body').animate({
-            scrollTop: $('.js--section-home').offset().top
-        }, 400);
+        $('html, body').animate({scrollTop: $('.js--section-home').offset().top}, 400); 
     });
 
     $('.scroll-to-bio').click(function () {
-        $('html, body').animate({
-            scrollTop: $('.js--section-bio').offset().top
-        }, 400);
+        $('html, body').animate({scrollTop: $('.js--section-bio').offset().top}, 400); 
     });
 
     $('.scroll-to-contact').click(function () {
-        $('html, body').animate({
-            scrollTop: $('.js--section-contact').offset().top
-        }, 400);
+        $('html, body').animate({scrollTop: $('.js--section-contact').offset().top}, 400); 
     });
 
     $('.read-more-trigger').click(function () {
@@ -39,23 +29,9 @@ $(document).ready(function () {
         $('.js--section-bio').toggleClass("extend-bio");
     });
 
-
-
-
-
-
-    $('.js--nav-icon, .js--main-nav a, .logo-black').click(function (element) {
+$('.js--nav-icon, .js--main-nav a, .logo-black').click(function(element){
         var nav = $('.js--main-nav');
         var icon = $('.js--nav-icon i');
-
-            var hamburger = document.getElementById('hamburger-icon');
-
-    hamburger.addEventListener('click', function () {
-        hamburger.src = "resources/js/close-icon.svg";
-        alert('hey');
-    });
-
-
 
         //Gets the class name of the element that triggered the event
         var clicked = element.target.className;
@@ -65,15 +41,13 @@ $(document).ready(function () {
             return;
 
         //Opens and closes the menu
-        if ($(window).width() < 650) {
+        if ($(window).width() < 650){
             nav.slideToggle(200);
         }
 
-
         //Changes icon states of the menu button
         if (icon.hasClass('fa-bars')) {
-            // icon.addClass('fa-times');
-
+            icon.addClass('fa-times');
             icon.removeClass('fa-bars');
         } else {
             icon.addClass('fa-bars');
@@ -82,13 +56,11 @@ $(document).ready(function () {
     });
 
 
-
-
-    $(window).resize(function () {
+    $(window).resize(function(){
         var nav = $('.js--main-nav');
         var icon = $('.js--nav-icon i');
 
-        if ($(window).width() > 651) {
+        if ($(window).width() > 651){
             nav.css("display", "flex");
             nav.css("position", "fixed");
             icon.addClass('ion-close-round');
@@ -101,4 +73,4 @@ $(document).ready(function () {
 
     });
 
-});
+}); 
