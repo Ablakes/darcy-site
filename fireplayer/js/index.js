@@ -1,22 +1,21 @@
 // =====	Audio Player JS ===== //
 
-$('audio').each(function() {
+$('audio').each(function () {
 
-  $(this).on("ended", function() {
+  $(this).on("ended", function () {
     this.play();
   }, false);
 
   // Audio Duration Timers
 
-  $(this).on("canplay", function() {
+  $(this).on("canplay", function () {
     var s = parseInt(this.duration % 60);
     s = ('0' + s).slice(-2);
     var m = parseInt((this.duration / 60) % 60);
     $(this).siblings('.progress-wrap').find(".audio-length").text(m + ':' + s);
-    console.log(this.duration);
   });
 
-  $(this).on("timeupdate", function() {
+  $(this).on("timeupdate", function () {
     var s = parseInt(this.currentTime % 60);
     s = ('0' + s).slice(-2);
     var m = parseInt((this.currentTime / 60) % 60);
@@ -25,7 +24,7 @@ $('audio').each(function() {
 
   // Audio Progress Bar
 
-  $(this).on('timeupdate', function() {
+  $(this).on('timeupdate', function () {
     var currentTime = this.currentTime;
     var duration = this.duration;
     $(this).siblings('.progress-wrap').find('.audio-seekbar .audio-slide').animate({
@@ -35,7 +34,7 @@ $('audio').each(function() {
 
   // Play/Pause Audio
 
-  $(this).siblings('.button-wrap').find('.audio-play').on("click", function() {
+  $(this).siblings('.button-wrap').find('.audio-play').on("click", function () {
     if (!$(this).parents().siblings('audio')[0].paused) {
       $(this).parents().siblings('audio')[0].pause();
       $(this).removeClass('playing');
