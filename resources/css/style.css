@@ -882,7 +882,7 @@ input[type=submit]:active {
 }
 
 .bio-headshot {
-	z-index: 1000;
+	z-index: 900;
 	position: absolute;
 	right: 6%;
 	max-width: 312px;
@@ -1177,7 +1177,7 @@ footer ul {
 
 .social-links li a:link,
 .social-links li a:visited {
-	font-size: 110%;
+	font-size: 1.5rem;
 }
 
 /*Icons*/
@@ -1304,6 +1304,7 @@ section {
 		opacity: 0;
 		transform: translateX(30px);
 	}
+
 	100% {
 		opacity: 1;
 		transform: translateX(0);
@@ -1315,6 +1316,7 @@ section {
 		opacity: 0;
 		transform: translateX(-30px);
 	}
+
 	100% {
 		opacity: 1;
 		transform: translateX(0);
